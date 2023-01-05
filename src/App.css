@@ -218,15 +218,13 @@
     color: var(--footer-color);
     padding-right: 16px;
     font-size: 12px;
+    border-right: 3px solid var(--footer-color);
 }
 
 .footer-left > p {
     color: var(--whitish-text);
 }
 
-#middle, #first {
-    border-right: 3px solid var(--footer-color);
-}
 
 .socials {
     display: flex;
@@ -333,6 +331,10 @@
     }
     .display-5 {
         font-size: 32px !important;
+    }
+
+    .policy > p {
+        font-size: 8px;
     }
 
 }
