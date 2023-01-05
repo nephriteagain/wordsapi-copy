@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
 <div className='container'>
-    <nav className='main-nav navbar navbar-expand-md navbar-lights fixed-top'>
+    <nav className='main-nav navbar navbar-expand-md navbar-lights'>
   <a href='#'className='navbar-brand h1'>WORDSAPI</a>
   <button 
     className='navbar-toggler'

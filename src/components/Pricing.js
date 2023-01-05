@@ -41,7 +41,7 @@ const Pricing = () => {
                     $49
                 </p>
                 <p className='mb-5'>250,000 request per Day</p>
-                <button className='btn btn-dark btn-lg mt-4'>
+                <button className='btn btn-dark md-btn-lg mt-4'>
                     Sign Up at RapidAPI
                 </button>
             </div>

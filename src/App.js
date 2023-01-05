@@ -19,6 +19,7 @@ function App() {
 
 
   return (
+    <>
     <div className="App">
       <Navbar />
       <Landing />
@@ -26,8 +27,9 @@ function App() {
       <SampleAPI />
       <Pricing />
       <Info />
-      <Footer />
     </div>
+      <Footer />
+    </>
   );
 }
 

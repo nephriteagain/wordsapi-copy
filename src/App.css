@@ -11,7 +11,11 @@
 
 /* nav */
 .main-nav {
-    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     margin: 0 auto;
     background-color: var(--whitish-text);
     padding-left: 10vw;
@@ -117,6 +121,7 @@
     background-color: #f8f9fb;
     opacity: .65;
     padding: 8px;
+    overflow: hidden;
 }
 
 .input-text, .dropup, .API-btn, .dropdown-menu {
@@ -175,6 +180,9 @@
 
 .footer {
     position: relative;
+    width: 100vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
     display: flex;
     flex-direction: row;
     /* temp */
@@ -185,9 +193,9 @@
     z-index: -1;
     background-color: var(--dark-color);
     position: absolute;
-    top: 0%;
-    left: -15%;
-    width: 2000px;
+    top:0;
+    left: 0;
+    width: 100vw;
     height: 100%;
 }
 
@@ -244,8 +252,13 @@
         width: 90vw;
     }
 
+    .main-nav {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
     .desc-section {
-        height: 100vh;
+        height: 120vh;
     }
 
     
@@ -290,7 +303,31 @@
     }
 
     .sample-api-background {
-        top: 200vh;
+        top: 220vh;
         height: 1150px;
     }
+
+    .card {
+        margin: 8px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card {
+        width: 280px;
+        height: 304px;
+    }
+    .my-4 {
+        margin-top: 24px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .my-3 {
+        margin-top: 16px !important;
+        margin-bottom: 16px !important;
+    }
+    .display-5 {
+        font-size: 32px !important;
+    }
+
 }
