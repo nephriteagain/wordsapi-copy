@@ -64,7 +64,7 @@
 /* description */
 
 .desc-section {
-    height: 55vh;
+    height: 60vh;
     padding-top: 48px;
 }
 
@@ -88,7 +88,7 @@
 .sample-api-background {
     z-index: -1;
     position: absolute;
-    top: 155vh;
+    top: 160vh;
     left: -20%;
     height: 950px;
     width: 120%;
@@ -139,7 +139,10 @@
 
 .card {
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15), 0 15px 20px rgba(0, 0, 0, 0.25);
-    margin: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
     width: 350px;
     height: 380px;
 }
@@ -316,6 +319,8 @@
     .card {
         width: 280px;
         height: 304px;
+        margin-left: auto ;
+        margin-right: auto;
     }
     .my-4 {
         margin-top: 24px !important;
