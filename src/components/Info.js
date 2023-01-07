@@ -2,7 +2,7 @@ import React from 'react'
 
 const Info = () => {
   return (
-    <div className='info my-5'>
+    <div className='info my-5' id='info'>
         <div className='info-docs'>
             <h3>Buy the Data - $629</h3>
             <p>If you'd prefer to host the data locally, <b>you can purchase the Words API data set</b>. Purchase of the Words API data set entitles you to use the data as much as you want, for as long as you want. Load the data directly into your app, make games with it, train an AI to take over the world with it.</p>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Description = () => {
   return (
-    <div className='desc-section row text-start'>
+    <div className='desc-section row text-start' id='description'>
         <div className='col-md-4 col-12'>
             <h2 className='desc-desc'>Word API is Dictionary</h2>
             <p className='dec-text'>Use it to find defintions for more than 150,000 words. <br/>Try some: </p>

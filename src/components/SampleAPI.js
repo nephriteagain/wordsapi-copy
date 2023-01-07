@@ -5,7 +5,7 @@ const SampleAPI = () => {
   
     
     
-    <div className='sample-api-content'>
+    <div className='sample-api-content' id='sample-api'>
           <div className='sample-api-background'></div>
             <div className='API-header'>
                 <h3>Try It</h3>

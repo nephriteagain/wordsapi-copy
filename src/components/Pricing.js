@@ -2,7 +2,7 @@ import React from 'react'
 
 const Pricing = () => {
   return (
-    <section className='pricing'>
+    <section className='pricing' id='pricing'>
         <div className='pricing-header mb-5'>
             <h2 className='mt-4 mt-5'>Monthly <b>Pricing</b> Plans</h2>
             <p>Account billing and access are handled by RapidAPI</p>
