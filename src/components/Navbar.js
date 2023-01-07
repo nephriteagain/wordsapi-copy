@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef} from 'react'
+import {useState, useEffect} from 'react'
 
 
 const lightColor = {borderBottom: '2px solid #fff'}
@@ -15,12 +15,7 @@ const Navbar = () => {
   const [infoColor, setInfoColor] = useState(lightColor)
   const [footerColor, setFooterColor] = useState(lightColor)
 
-  const homeRef = useRef()
-  const aboutRef= useRef()
-  const tryitRef= useRef()
-  const pricingRef= useRef()
-  const infoRef= useRef()
-  const footerRef= useRef()
+
   
   useEffect(()=> {
     function handleScroll() {
@@ -36,7 +31,7 @@ const Navbar = () => {
   }, [])
 
   useEffect(()=> {
-    console.log('scroll',scrollY)
+
 
     const homePosition = document.getElementById('home').offsetTop
     const aboutPosition = document.getElementById('description').offsetTop
@@ -45,12 +40,6 @@ const Navbar = () => {
     const infoPosition = document.getElementById('info').offsetTop
     const footerPosition = document.getElementById('blogs').offsetTop
 
-    console.log('about', aboutPosition)
-    console.log('home', homePosition)
-    console.log('tryit', tryitPosition)
-    console.log('pricing', pricingPosition)
-    console.log('info', infoPosition)
-    console.log('footer', footerPosition)
     
 
     if ((scrollY) <= homePosition) {
