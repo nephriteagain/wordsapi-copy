@@ -1,11 +1,12 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 
 
 const lightColor = {borderBottom: '2px solid #fff'}
 const darkColor = {borderBottom: '2px solid #0a0a0a'}
 
 const Navbar = () => {
-
+  
+  const [scrollY, setScrollY] = useState(0)
 
   const [homeColor, setHomeColor] = useState(lightColor)
   const [aboutColor, setAboutColor] = useState(lightColor)
@@ -14,8 +15,12 @@ const Navbar = () => {
   const [infoColor, setInfoColor] = useState(lightColor)
   const [footerColor, setFooterColor] = useState(lightColor)
 
-  const [scrollY, setScrollY] = useState(0)
-  
+  const homeRef = useRef()
+  const aboutRef= useRef()
+  const tryitRef= useRef()
+  const pricingRef= useRef()
+  const infoRef= useRef()
+  const footerRef= useRef()
   
   useEffect(()=> {
     function handleScroll() {
@@ -31,9 +36,24 @@ const Navbar = () => {
   }, [])
 
   useEffect(()=> {
-    console.log(scrollY)
+    console.log('scroll',scrollY)
 
-    if (scrollY < 512) {
+    const homePosition = document.getElementById('home').offsetTop
+    const aboutPosition = document.getElementById('description').offsetTop
+    const tryitPosition = document.getElementById('sample-api').offsetTop
+    const pricingPosition = document.getElementById('pricing').offsetTop
+    const infoPosition = document.getElementById('info').offsetTop
+    const footerPosition = document.getElementById('blogs').offsetTop
+
+    console.log('about', aboutPosition)
+    console.log('home', homePosition)
+    console.log('tryit', tryitPosition)
+    console.log('pricing', pricingPosition)
+    console.log('info', infoPosition)
+    console.log('footer', footerPosition)
+    
+
+    if ((scrollY) <= homePosition) {
       setHomeColor(darkColor)
       setAboutColor(lightColor)
       setTryitColor(lightColor)
@@ -41,7 +61,7 @@ const Navbar = () => {
       setInfoColor(lightColor)
       setFooterColor(lightColor)
     }
-    if (scrollY > 3935)  {
+    if (scrollY + 800 > footerPosition)  {
       setHomeColor(lightColor)
       setAboutColor(lightColor)
       setTryitColor(lightColor)
@@ -51,7 +71,7 @@ const Navbar = () => {
     }
     
     
-    else if (scrollY > 3550) {
+    else if (scrollY + 320 > infoPosition) {
       setHomeColor(lightColor)
       setAboutColor(lightColor)
       setTryitColor(lightColor)
@@ -59,7 +79,7 @@ const Navbar = () => {
       setInfoColor(darkColor)
       setFooterColor(lightColor)
     }
-    else if (scrollY > 1880) {
+    else if (scrollY +205 > pricingPosition) {
       setHomeColor(lightColor)
       setAboutColor(lightColor)
       setTryitColor(lightColor)
@@ -67,7 +87,7 @@ const Navbar = () => {
       setInfoColor(lightColor)
       setFooterColor(lightColor)
     }
-    else if (scrollY > 872) {
+    else if (scrollY + 242 > tryitPosition) {
       setHomeColor(lightColor)
       setAboutColor(lightColor)
       setTryitColor(darkColor)
@@ -75,7 +95,7 @@ const Navbar = () => {
       setInfoColor(lightColor)
       setFooterColor(lightColor)
     }
-    else if (scrollY > 450) {
+    else if (scrollY + 174 > aboutPosition) {
       setHomeColor(lightColor)
       setAboutColor(darkColor)
       setTryitColor(lightColor)

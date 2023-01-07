@@ -3,7 +3,7 @@ import React from 'react'
 const Landing = () => {
   return (
     <>
-    <div className='landing'>
+    <div className='landing' id='home'>
         <div className='landing-div'>
             <h1 className='text'>An API for the English Language</h1>
             <p className='text description'>FInd definitions, related words, and more, with a simple to use RESTful API</p>
